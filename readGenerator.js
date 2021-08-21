@@ -31,4 +31,4 @@ function readGenerator(answers) {
   `;
   }
   
-  module.exports = {readGenerator};
+  module.exports = readGenerator;
