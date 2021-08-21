@@ -57,6 +57,7 @@ inquirer.prompt(questions).then(function (response) {
     
     fs.writeFile("./ReadMe.md", readGenerator(response), function (err) {
         if (err) throw err
-        console.log("success");
-    })
+        console.log("success"); 
+        // console.log(answers)
+    }) 
 });
