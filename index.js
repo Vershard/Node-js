@@ -1,9 +1,9 @@
 let inquirer = require('inquirer');
 let fs = require('fs')
 let readGenerator = require("./readGenerator"); 
+function readGenerator(){};  
 
-
-const questions = [{
+var questions = [{
     type: "input",
     message: "What is the title of your repository?",
     name: "title"
@@ -54,8 +54,7 @@ const questions = [{
 inquirer.prompt(questions).then(function(response) {
     console.log(response);
     
-     let content = Generator(response);
-     console.log(content);
+     var content = readGenerator(response);
       fs.writeFile("./ReadMe.md", content, function(err){
           if (err) throw err
           console.log("success");
